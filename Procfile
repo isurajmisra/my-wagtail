@@ -1,0 +1,1 @@
+web: gunicorn dsp_school.wsgi
