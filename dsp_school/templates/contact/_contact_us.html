@@ -1,0 +1,48 @@
+{% load wagtailcore_tags widget_tweaks %}
+<div class="wrap" style="margin-top:5em;">
+  <div class="container">
+    <form class="cool-b4-form" action="{% pageurl page %}" method="POST">
+        {% csrf_token %}
+    <h2 class="text-center pt-4">{{ page.title }}</h2>
+    <p>
+        {{ self.intro|richtext }}
+    </p>
+      <div class="form-row">
+
+
+
+              <div class="col-md-6">
+                  {%for field in form%}
+                  {%if field.name != "message" %}
+                    <div class="form-group  ">
+                        {{ field|add_class:"form-control"|add_required_class:"is-required"}}
+                        {{field.label_tag}}
+                    </div>
+                  {%endif%}
+                  {%endfor%}
+                </div>
+
+
+
+          <div class="col-md-6">
+              {%for field in form%}
+              {%if field.name == "message" %}
+                    <div class="form-group  ">
+                        {{ field|add_class:"form-control"|add_required_class:"is-required"}}
+                        {{field.label_tag}}
+                    </div>
+              {%endif%}
+              {%endfor%}
+          </div>
+
+
+
+
+
+      </div>
+      <div class="col-md-10 mx-auto mt-3">
+        <button type="submit" class="btn btn-lg btn-danger btn-block">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
