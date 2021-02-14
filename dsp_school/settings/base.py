@@ -169,7 +169,7 @@ WAGTAIL_SITE_NAME = "dsp_school"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'https://my-wagtail.herokuapp.com'
 
 RECAPTCHA_PUBLIC_KEY = "6LeWR1YaAAAAAJRdtgt0MFxRA68MMTDlSUmvBgIP"
 RECAPTCHA_PRIVATE_KEY = "6LeWR1YaAAAAAGH73TICPtuXRZY2UNWuivOZhHz0"
