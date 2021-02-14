@@ -1,6 +1,10 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    padding:2em;
+.rich_text{
+padding:5em;
+}
+
+@media only screen and (max-width: 767px){
+    .rich_text{
+        padding:2em;
+        }
+
 }
